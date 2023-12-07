@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Component Library</title>
+	<link href="style.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/9bb2be39d1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<!--Disse komponentene vil jeg lage: Komponenter:
+	//* 1. Accordion, 2. Toast, 3. Checkbox, 4. Badge, 5. Bryter/Toggle, 6. Card, 7. Breadcrumbs, 8. Box, 9. Datepicker,
+	10. Numeric Stepper, 11.Tabell-->
+
+	<!-- HOVED MENY-->
+	<div>
+		<form class="nav-bar-options">
+			<a href="#badge">
+				<p>Badge</p>
+			</a>
+			<a href="#button">
+				<p>Button</p>
+			</a>
+			<a href="#checkbox">
+				<p>Checkbox</p>
+			</a>
+			<a href="#date-picker">
+				<p>Date Picker</p>
+			</a>
+			<a href="#input">
+				<p>Input</p>
+			</a>
+			<a href="#radio">
+				<p>Radio</p>
+			</a>
+			<a href="#select">
+				<p>Select</p>
+			</a>
+			<a href="#switch">
+				<p>Switch</p>
+			</a>
+			<a href="#accordion">
+				<p>Accordion</p>
+			</a>
+			<a href="#counter">
+				<p>Counter</p>
+			</a>
+		</form>
+	</div>
+
+
+
+	<!--MODALER-->
+	<!--Badge-->
+	<div class="modal" id="badge">
+		<div class="component-container">
+			<h2>Badge</h2>
+			<p class="badge"> <i class="fa-solid fa-universal-access"></i> Universal access 
+			</p>
+		</div>
+	</div>
+
+	<!--Button-->
+	<div class="modal" id="button">
+		<div class="component-container">
+			<h2>Button</h2>
+			<div class="state-container">
+				<button class="btn-component">Button</button>
+			</div>
+			<div class="state-container">
+				<button id="btn-hover" class="btn-component">Button</button>
+				<p>Hover</p>
+			</div>
+			<div class="state-container">
+				<button id="btn-clicked" class="btn-component">Button</button>
+				<p>clicked</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Checkbox-->
+	<div class="modal" id="checkbox">
+		<div class="component-container">
+			<h2>Checkbox</h2>
+			<div class="state-container">
+				<form>
+					<input class="checkbox-component"  type="checkbox" >
+					<label class="checkbox-component-label" for="checkbox-component">Checkbox</label>
+				</form>
+			</div>
+			<div class="state-container">
+				<form>
+					<input class="checkbox-component" checked type="checkbox">
+					<label class="checkbox-component-label" for="checkbox-component">Checked</label>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!--Date Picker-->
+	<div class="modal" id="date-picker">
+		<div class="component-container">
+			<h2>Date Picker</h2>
+			<form>
+				<input class="date-picker" type="date" id="date-component">
+			</form>
+		</div>
+	</div>
+	
+	<!--Input-->
+	<div class="modal" id="input">
+		<div class="component-container">
+			<h2>Input</h2>
+			<form>
+				<input class="input-component" type="text" id="input-component" placeholder="input text...">
+				<input class="input-submit-btn" type="submit">
+			</form>
+		</div>
+	</div>
+
+	<!--Radio-->
+	<div class="modal" id="radio">
+		<div class="component-container">
+			<h2>Radio</h2>
+			<form>
+			   	<input class="radio-component" type="radio" id="radio1" name="radioOptions" value="Option1">
+			   	<label for="radio1">Option A</label><br>
+			   	<input class="radio-component" type="radio" id="radio2" name="radioOptions" value="Option2">
+			   	<label for="radio2">Option B</label><br>
+			   	<input class="radio-component" checked type="radio" id="radio3" name="radioOptions" value="Option3">
+			   	<label for="radio3">Option C</label>
+			</form>
+			<p>------</p>
+			<form>
+				<input class="radio-component" type="radio" id="radio-hover" name="radioOptions" value="Option1">
+				<label for="radio1">Hover</label><br>
+				<input checked class="radio-component" type="radio" id="radio2" name="radioOptions" value="Option2">
+				<label for="radio2">Selected</label><br>
+		 </form>
+		</div>
+	</div>
+
+	<!--Select-->
+	<div class="modal" id="select">
+		<div class="component-container">
+			<h2>Select</h2>
+			<div class="dropdown">
+				<button class="drop-btn">Hover to select</button>
+				<div class="dropdown-content">
+				  <a href="#select">Option A</a>
+				  <a href="#select">Option B</a>
+				  <a href="#select">Option C</a>
+				</div>
+			</div>
+			<p class="state-select-title">Hover selector</p>
+			<div class="dropdown select-hoverstate">
+				<button class="drop-btn">Hover to select</button>
+				<div id="dropdown-hover-state" class="dropdown-content">
+				  <a href="#select">Option A</a>
+				  <a href="#select">Option B</a>
+				  <a href="#select">Option C</a>
+				</div>
+			</div>
+			<p class="state-select-title">Hover link</p>
+			<div class="dropdown select-hoverstate">
+				<button class="drop-btn">Hover to select</button>
+				<div id="dropdown-hover-state" class="dropdown-content">
+				  <a href="#select">Option A</a>
+				  <a id="hover-link" href="#select">Option B</a>
+				  <a href="#select">Option C</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Switch-->
+	<div class="modal" id="switch">
+		<div class="component-container">
+			<h2>Switch</h2>
+			<label class="switch">
+				<input type="checkbox">
+				<span class="switch-slider"></span>
+			</label>
+			<div class="switch-checked-container">
+				<label class="switch">
+					<input checked type="checkbox">
+					<span class="switch-slider"></span>
+				</label>
+				<p>Checked</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Accordion-->
+	<div class="modal" id="accordion">
+		<div class="component-container">
+			<h2>Accordion</h2>
+			<button id="accordion-btn">Show more</button>
+			<div id="accordion-info" class="accodrion-info">
+				<p>more info</p>
+			</div>
+			<div class="accordion-container">
+				<button id="accordion-btn">Show less</button>
+				<div  class="accodrion-info-show">
+					<p>more info</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Counter-->
+	<div class="modal" id="counter">
+		<div class="component-container">
+			<h2>Counter</h2>
+			<div class="counter-container">
+				<button id="counter-down" class="counter-btn">-</button>
+				<p id="count">1</p>
+				<button id="counter-up" class="counter-btn">+</button>
+			</div>
+		</div>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
